@@ -1,0 +1,34 @@
+import discord
+from discord.ext import commands
+
+bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
+
+@bot.event
+async def on_ready():
+    print("bot is online")
+
+@bot.command()
+async def add(ctx, a: int, b: int):
+    embed = discord.Embed(title='Adding', description=f'Your answer is: {a+b}')
+    await ctx.send(embed=embed)
+
+@bot.command(aliases=['div'])
+async def divide(ctx, a: int, b: int):
+    divide = (a/b)
+    embed = discord.Embed(title='Dividng', description=f'Your answer is: {divide}')
+    await ctx.send(embed=embed)
+
+@bot.command(aliases=['mult','x', 'multi'])
+async def multiply(ctx, a: int, b: int):
+    embed = discord.Embed(title='Multiplying', description=f'Your answer is {a*b}')
+    await ctx.send(embed=embed)
+
+@bot.command()
+async def root(ctx, number):
+    value = int(number)**(1/2.0)
+    embed = discord.Embed(title='Root', description=f'Your answer is {value}')
+    await ctx.send(embed=embed)
+
+bot.run('MTAyNDk2MzUxNjg5OTI3MDY2OA.GARuXk.QDCHBKWNj9StbhI434q2giqS3ZOo7b5ycsvgas')
+
+#vanquish#0002
