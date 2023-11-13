@@ -29,6 +29,6 @@ async def root(ctx, number):
     embed = discord.Embed(title='Root', description=f'Your answer is {value}')
     await ctx.send(embed=embed)
 
-bot.run('MTAyNDk2MzUxNjg5OTI3MDY2OA.GARuXk.QDCHBKWNj9StbhI434q2giqS3ZOo7b5ycsvgas')
+bot.run('your token here pls')
 
-#vanquish#0002
+#madebymaanyxx
